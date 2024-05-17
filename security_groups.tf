@@ -30,7 +30,7 @@ resource "aws_security_group" "private_sg" {
         ipv6_cidr_blocks = ["::/0"]
     }
     ingress {
-        cidr_blocks = [module.network.vpc_cidr]
+        cidr_blocks = [var.vpc_cidr]
         from_port = 3000
         to_port = 3000
         protocol = "tcp"
@@ -39,7 +39,7 @@ resource "aws_security_group" "private_sg" {
         from_port   = 22
         to_port     = 22
         protocol    = "tcp"
-        cidr_blocks = [module.network.vpc_cidr]
+        cidr_blocks = [var.vpc_cidr]
     }
 
 }

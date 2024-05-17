@@ -7,11 +7,6 @@ variable "cidr_zero" {
   default = "0.0.0.0/0"
 }
 
-variable "region" {
-  type        = string
-}
-
-
 variable "subnets" {
   type        = list(object({
     name=string,

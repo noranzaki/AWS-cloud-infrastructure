@@ -1,6 +1,6 @@
 resource "aws_elasticache_subnet_group" "elasticache_subnet_group" {
   name       = "elasticache-subnet-group"
-  subnet_ids = [module.network.subnets["private1"].id]
+  subnet_ids = [ module.network.subnets["private1"].id  ]
 }
 
 resource "aws_elasticache_cluster" "my_elasticache_cluster" {

@@ -1,5 +1,5 @@
 variable vpc_cidr {
-    type        = string
+  type        = string
 }
 
 variable "cidr_zero" {
@@ -12,19 +12,18 @@ variable machine_type {
 }
 
 variable region {
-    type        = string
+  type        = string
 }
 
 variable "subnets" {
-  type = list(object({
-    name              = string,
-    cidr              = string,
-    type              = string,
-    availability_zone = string
+  type        = list(object({
+    name=string,
+    cidr=string,
+    type=string,
+    availability_zone=string
 
   }))
 }
-
 
 variable "db_pass" {
   type      = string
